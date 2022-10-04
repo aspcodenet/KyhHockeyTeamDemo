@@ -1,0 +1,4 @@
+﻿DIF;Djurgårdens IF;Stockholm
+AIK;Allmänna Idrottsklubben;Solna
+BIK;BIK Karlskoga;Karlskoga
+MODO;Modo;Örnsköldsvik

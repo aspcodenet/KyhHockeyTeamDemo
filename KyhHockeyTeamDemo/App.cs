@@ -7,7 +7,6 @@ public class App
 {
     public void Run()
     {
-        return;
         //ABSOLUT   
         //string path = "C:\\SQL2019\\garmin\\systementor\\2022-05-29_garmin_connect_export\\Teams.txt";
 
@@ -48,6 +47,8 @@ public class App
     {
         Console.Write("Ange hemmalag:"); //Shoprtname
         var lag1 = Console.ReadLine();
+        //Nu ska vi skriva ut det TEAMET (produkten) 
+
         Console.Write("Ange bortalag:"); //Shoprtname
         var lag2 = Console.ReadLine();
 

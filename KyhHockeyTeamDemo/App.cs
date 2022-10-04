@@ -43,23 +43,55 @@ public class App
         //REPETITION FILER
     }
 
+    private HockeyTeam FindTeamFromShortName(List<HockeyTeam> allTeams, string? lag1)
+    {
+        foreach (var team in allTeams)
+        {
+            if (team.ShortName.ToLower() == lag1.ToLower()) return team;
+        }
+
+        return null; // NULL  
+    }
+
     private void GameRegistration(List<HockeyTeam> allTeams)
     {
-        Console.Write("Ange hemmalag:"); //Shoprtname
-        var lag1 = Console.ReadLine();
-        //Nu ska vi skriva ut det TEAMET (produkten) 
+        HockeyTeam team1;
+        while (true)
+        {
+            Console.Write("Ange hemmalag:"); //Shoprtname        400 4
+            var lag1 = Console.ReadLine();
+            // Om vi har matat in en VALID shortname så break
+            team1 = FindTeamFromShortName(allTeams, lag1);
+            if (team1 == null)
+                Console.WriteLine("Ogiltig shortname");
+            else
+                break;
+        }
 
-        Console.Write("Ange bortalag:"); //Shoprtname
-        var lag2 = Console.ReadLine();
+        HockeyTeam team2;
+        while (true)
+        {
+            Console.Write("Ange bortalag:"); //Shoprtname        400 4
+            var lagKod = Console.ReadLine();
+            // Om vi har matat in en VALID shortname så break
+            team2 = FindTeamFromShortName(allTeams, lagKod);
+            if (team2 == null) 
+                Console.WriteLine("Ogiltig shortname");
+            else
+                break;
+        }
 
-        Console.Write($"Ange antal mål som {lag1} gjorde:");
+
+
+
+        Console.Write($"Ange antal mål som {team1.Name} gjorde:");
         var goal1 = Convert.ToInt32(Console.ReadLine());
-        Console.Write($"Ange antal mål som {lag2} gjorde:");
+        Console.Write($"Ange antal mål som {team2.Name} gjorde:");
         var goal2 = Convert.ToInt32(Console.ReadLine());
 
         var filename = DateTime.Now.ToString("yyyy-MM-dd") + ".txt";
         // Björklöven - AIK 4-4
-        var line = $"{lag1} - {lag2}       {goal1}-{goal2}";
+        var line = $"{team1.Name} - {team2.Name}       {goal1}-{goal2}";
         File.AppendAllText( filename, line +  Environment.NewLine ) ;
 
         //var lines = new List<string>();
@@ -69,6 +101,7 @@ public class App
 
 
     }
+
 
     private List<HockeyTeam> ReadTeamsFromFile()
     {

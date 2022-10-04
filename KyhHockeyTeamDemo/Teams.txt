@@ -1,4 +1,12 @@
 ﻿DIF;Djurgårdens IF;Stockholm
 AIK;Allmänna Idrottsklubben;Solna
 BIK;BIK Karlskoga;Karlskoga
-MODO;Modo;Örnsköldsvik
+MOD;Modo Hockey;Örnsköldsvik
+ÖIK;Östersunds IK;Östersund
+MIK;Mora IK;Mora
+VHA;HVC Vita Hästen;Norrköping
+TAI;Tingsryds AIF;Tingsryd
+KIK;Kristianstads IK;Kristianstad
+SSK;Södertälje SK;Södertälje
+AIS;Almtuna IS;Almtuna
+IFB;IF Björklöven;Umeå

@@ -7,18 +7,19 @@ public class App
 {
     public void Run()
     {
-        var team = new HockeyTeam();
-        team.ShortName = "AIK";
-        team.Name = "Allmänna Idrottsklubben";
-        team.City = "Solna";
-        Console.WriteLine(team.Name);
+        //ABSOLUT
+        //string path = "C:\\SQL2019\\garmin\\systementor\\2022-05-29_garmin_connect_export\\Teams.txt";
 
-        var team2 = new HockeyTeam();
-        team2.ShortName = "DIF";
-        team2.Name = "Djurgården";
-        team2.City = "Stockholm";
 
-        int i = 12;
+        var allTeams = new List<HockeyTeam>();
+        //1 - läs in alla team -> lista
+        if(File.Exists("Teams.txt"))
+            allTeams = ReadTeamsFromFile();
+
+        //2 använd listan när vi kör
+
+        //REPETITION FILER
+
 
     }
 }
